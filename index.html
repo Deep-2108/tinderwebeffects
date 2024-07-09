@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinder Animation effects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .detailscontainer{
+        background: linear-gradient(to bottom,transparent,rgba(0,0,0,0.483));
+    }
+</style>
+<body>
+    <div class="w-full h-screen bg-black">
+        <div class="imagecontainer w-full h-screen relative overflow-hidden ">
+            <div class=" maincard z-[3] w-[130%] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  h-[130%]">
+                <img class="w-full h-full object-cover" src="" alt="">
+            </div>
+            <div class="incomingcard z-[2] w-[130%] absolute top-1/2 left-1/2 h-[130%] -translate-y-1/2 -translate-x-1/2 ">
+                <img class="w-full h-full object-cover" src="" alt="">
+            </div>
+        </div>
+        <div class="absolute top-0 left-0 z-[4] w-full h-screen  flex flex-col justify-between">
+            <div class="navbar px-5 py-6 flex justify-between items-center text-white">
+                <div class="prflimg w-[3rem] h-[3rem]  rounded-full overflow-hidden">
+                    <img class="w-full h-full object-cover" src="" alt="">
+                </div>
+                <h3 class=" capitalize text-2xl tracking-tighter font-semibold">they liked you</h3>
+                <div class="chaticon relative flex items-center justify-center  w-[3.2rem] rounded-full h-[3.2rem] bg-white/50">
+                    <i class="  fas fa-comment"></i>
+                    <div class="badge rounded-full bg-red-700 w-6 h-6 flex absolute items-center justify-center top-0 right-0 translate-x-[5px] -translate-y-[5px] animate-pulse p-1">
+                        <h5 class=" text-xl font-bold text-blue-700"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="detailscontainer w-full">
+                <div class="details w-full px-5 py-6 ">
+                    <div class="element location flex  gap-4">
+                        <i class="fa-solid fa-arrow-turn-up w-[2rem] h-[2rem] bg-white flex items-center justify-center rounded font-semibold  "></i>
+                        <h3 class="text-white"></h3>
+                    </div>
+                    <div class="element name flex gap-5 text-white mt-1">
+                        <h1 class="text-5xl font-semibold tracking-tighter"></h1>
+                        <h1 class="opacity-60 text-5xl font-semibold tracking-tighter"></h1>
+                    </div>
+                    <div class="element tags flex gap-3 text-white mt-4">
+                    </div>
+                    <div class=" element bio text-white/80 mt-5">
+                        <h3 class="text-xl"></h3>
+                        <p class="text-lg mt-3"></p>
+                    </div>
+                    <div class="element flex items-start mt-10 gap-2 ">
+                        <button class=" deny py-3 rounded-xl bg-white w-1/2">
+                            <i class="fa-solid fa-xmark text-3xl font-bold"></i>
+                        </button>
+                        <button class="py-3 accept rounded-xl bg-[#FC5149] w-1/2 " onclick="heartClick()">
+                            <i class="fa-solid fa-heart text-white text-3xl font-bold"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
